@@ -425,10 +425,10 @@
     /* */
     margin-bottom: 40px;
     position: relative;
-    width: 30%; }
+    width: 48%; }
     @media only screen and (max-width: 1200px) {
       .portfolio__list-item {
-        width: 30%; } }
+        width: 48%; } }
     @media only screen and (max-width: 900px) {
       .portfolio__list-item {
         width: 48%; } }
