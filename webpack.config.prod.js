@@ -58,7 +58,10 @@ module.exports = {
   plugins: [
     extractSass,
     new webpack.EnvironmentPlugin([
-      "NODE_ENV"
+      "NODE_ENV",
+      "SPACE_ID",
+      "CONTENT_DELIVERY_API",
+      "API_BASE_URL"
     ])
   ]
 };

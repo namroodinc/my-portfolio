@@ -3,54 +3,33 @@ import { Link } from "react-router-dom";
 
 export default class Header extends React.Component {
   render() {
-    const links = (
-      <div>
-        <Link
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
-          to="/page"
-        >
-          Page
-        </Link>
-      </div>
-    );
-
     return (
-      <header>
-
+      <header
+        className="header"
+      >
         <div
-          className="header"
+          className="header__logo"
         >
-
-          <div
-            className="header__logo"
+          <Link
+            to="/"
           >
-            <Link
-              to="/"
-            >
-              PT
-            </Link>
-          </div>
-
-          <div
-            className="header__navigation"
-          >
-            {links}
-          </div>
-
+            PT
+          </Link>
         </div>
 
         <div
-          className="sub-header"
+          className="header__navigation"
         >
-          <div
-            className="sub-header__navigation"
+          <Link
+            to="/"
           >
-            {links}
-          </div>
+            Home
+          </Link>
+          <Link
+            to="/page"
+          >
+            Page
+          </Link>
         </div>
       </header>
     );

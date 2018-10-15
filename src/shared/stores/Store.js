@@ -1,15 +1,28 @@
-import { autorun, observable } from "mobx";
+import { action, autorun, extendObservable } from "mobx";
 
 class Store {
-  @observable loading = true;
-  @observable value = '2018';
+  constructor() {
+    this.reset();
+  }
+
+  @action reset() {
+    extendObservable(this, {
+      entries: [],
+      loading: true,
+      portfolioItems: []
+    });
+  }
 
   isLoading() {
     return this.loading;
   }
 
-  retrieveValue() {
-    return this.value;
+  retrieveEntries() {
+    return this.entries;
+  }
+
+  retrievePortfolioItems() {
+    return this.portfolioItems;
   }
 }
 

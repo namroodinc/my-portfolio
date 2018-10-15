@@ -14,9 +14,11 @@ export default class AppController extends React.Component {
   render() {
     return (
       <div>
+
         <div
           className="wrapper"
         >
+
           <Header />
 
           <Switch>
@@ -36,10 +38,11 @@ export default class AppController extends React.Component {
               component={Page}
             />
           </Switch>
+
         </div>
 
         <footer>
-          pt
+          .
         </footer>
       </div>
     )
