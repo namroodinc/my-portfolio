@@ -10,18 +10,22 @@ class PortfolioListItem extends React.Component {
       <div
         className="portfolio__list-item"
       >
-        <Link
-          to={`/work/${id}`}
+        <div
+          className="portfolio__list-item__content"
         >
-          <img
-            src={`https:${assetUrl}`}
-          />
-        </Link>
-        <Link
-          to={`/work/${id}`}
-        >
-          {title}
-        </Link>
+          <Link
+            to={`/work/${id}`}
+          >
+            <img
+              src={`https:${assetUrl}`}
+            />
+          </Link>
+          <Link
+            to={`/work/${id}`}
+          >
+            {title}
+          </Link>
+        </div>
       </div>
     );
   }

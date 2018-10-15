@@ -32,6 +32,11 @@ class Store {
 
   @computed get portfolioList() {
     return this.portfolioItems
+      .sort((a, b) => {
+        const prev = a.fields.sortOrder || 100;
+        const next = b.fields.sortOrder || 100;
+        return prev - next;
+      })
       .map((item) => {
         const { fields, sys } = item;
         const { featuredMedia, title } = fields;
@@ -53,6 +58,6 @@ export default store;
 
 autorun(() => {
   // Uncomment below this to see how autorun in action: https://mobx.js.org/refguide/autorun.html
-  const { value } = store;
-  console.log(value);
+  // const { value } = store;
+  // console.log(value);
 });

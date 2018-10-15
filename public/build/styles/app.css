@@ -1,11 +1,36 @@
-.portfolio__list-item {
-  width: 33%; }
-  .portfolio__list-item img {
-    width: 100%; }
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .portfolio__list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 30%;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 1200px) {
+      .portfolio__list-item {
+        width: 30%; } }
+    @media only screen and (max-width: 900px) {
+      .portfolio__list-item {
+        width: 48%; } }
+    @media only screen and (max-width: 600px) {
+      .portfolio__list-item {
+        margin-bottom: 20px;
+        width: 100%; } }
+    .portfolio__list-item__content {
+      display: block; }
+      .portfolio__list-item__content img {
+        width: 100%; }
 
 body {
-  background-color: #880E4F;
-  color: #FFFFFF;
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Roboto, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Open Sans", sans-serif;
   margin: 0;
   padding: 0; }

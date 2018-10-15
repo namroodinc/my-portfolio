@@ -2,6 +2,7 @@
 // const {} = Styles;
 
 export default {
-  palette: {
+  typography: {
+    useNextVariants: true
   }
 }
