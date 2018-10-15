@@ -61,7 +61,8 @@ module.exports = {
       "NODE_ENV",
       "SPACE_ID",
       "CONTENT_DELIVERY_API",
-      "API_BASE_URL"
+      "API_BASE_URL",
+      "BASE"
     ])
   ]
 };

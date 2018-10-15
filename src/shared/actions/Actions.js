@@ -8,7 +8,7 @@ class Actions {
     Store.loading = true;
 
     request
-      .get(`${process.env.API_BASE_URL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.CONTENT_DELIVERY_API}`)
+      .get(`${process.env.BASE}/entries?access_token=${process.env.CONTENT_DELIVERY_API}`)
       .end(function (err, res) {
         Store.loading = false;
 
@@ -24,13 +24,14 @@ class Actions {
     Store.loading = true;
 
     request
-      .get(`${process.env.API_BASE_URL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.CONTENT_DELIVERY_API}&content_type=portfolio`)
+      .get(`${process.env.BASE}/entries?access_token=${process.env.CONTENT_DELIVERY_API}&content_type=portfolio`)
       .end(function (err, res) {
         Store.loading = false;
 
         if (err) {
           console.log(err);
         } else if (res) {
+          Store.assets.push(...res.body.includes.Asset);
           Store.portfolioItems = res.body.items;
         }
       });
