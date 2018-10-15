@@ -5,8 +5,10 @@
 
   &__list-item {
     display: flex;
+    height: 400px; /* */
+    margin-bottom: 40px;
+    position: relative;
     width: 30%;
-    margin-bottom: 20px;
 
     @media only screen and (max-width: $fullContainerWidth) {
       width: 30%;

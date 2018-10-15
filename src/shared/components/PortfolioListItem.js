@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
+import Glitch from "./Glitch";
+
 class PortfolioListItem extends React.Component {
   render() {
     const { assetUrl, id, title } = this.props;
@@ -16,7 +18,7 @@ class PortfolioListItem extends React.Component {
           <Link
             to={`/work/${id}`}
           >
-            <img
+            <Glitch
               src={`https:${assetUrl}`}
             />
           </Link>
