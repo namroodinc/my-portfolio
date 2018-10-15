@@ -7,7 +7,7 @@ import {
 
 import {
   Home,
-  Page
+  Work
 } from "../handlers/Index";
 
 export default class AppController extends React.Component {
@@ -29,13 +29,8 @@ export default class AppController extends React.Component {
             />
             <Route
               exact
-              path="/page"
-              component={Page}
-            />
-            <Route
-              exact
-              path="/page/:pageId"
-              component={Page}
+              path="/work/:portfolioId"
+              component={Work}
             />
           </Switch>
 
@@ -44,6 +39,7 @@ export default class AppController extends React.Component {
         <footer>
           .
         </footer>
+
       </div>
     )
   }

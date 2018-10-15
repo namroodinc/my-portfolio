@@ -36,6 +36,47 @@ class Actions {
         }
       });
   }
+
+  @action getOnePortfolioItem(portfolioId) {
+    Store.loading = true;
+
+    return new Promise((resolve, reject) => {
+      request
+        .get(`${process.env.BASE}/entries/${portfolioId}?access_token=${process.env.CONTENT_DELIVERY_API}`)
+        .end(function (err, res) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(res.body);
+          }
+        });
+    }).then((item) => {
+      const { fields } = item;
+      const { mainMedia } = fields;
+
+      const mediaPromise = mainMedia
+        .map(image => {
+          return new Promise((resolve, reject) => {
+            request
+              .get(`${process.env.BASE}/assets/${image.sys.id}?access_token=${process.env.CONTENT_DELIVERY_API}`)
+              .end(function (err, res) {
+                if (err) {
+                  reject(err);
+                } else {
+                  resolve(res.body.fields.file);
+                }
+              });
+          })
+        });
+
+      return Promise.all(mediaPromise)
+        .then(media => {
+          Store.assets.push(...media);
+          Store.portfolioItem = item.fields;
+          Store.loading = false;
+        });
+    });
+  }
 }
 
 export default new Actions();

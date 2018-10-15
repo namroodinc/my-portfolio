@@ -10,6 +10,7 @@ class Store {
       assets: [],
       entries: [],
       loading: true,
+      portfolioItem: {},
       portfolioItems: []
     });
   }
@@ -19,11 +20,15 @@ class Store {
   }
 
   retrieveAssets() {
-    return this.entries;
+    return this.assets;
   }
 
   retrieveEntries() {
     return this.entries;
+  }
+
+  retrievePortfolioItem() {
+    return this.portfolioItem;
   }
 
   retrievePortfolioItems() {

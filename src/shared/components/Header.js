@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default class Header extends React.Component {
   render() {
@@ -10,26 +9,21 @@ export default class Header extends React.Component {
         <div
           className="header__logo"
         >
-          <Link
-            to="/"
+          <a
+            href="/"
           >
-            PT
-          </Link>
+            Ashoor Namrood
+          </a>
         </div>
 
         <div
           className="header__navigation"
         >
-          <Link
-            to="/"
+          <a
+            href="/"
           >
             Home
-          </Link>
-          <Link
-            to="/page"
-          >
-            Page
-          </Link>
+          </a>
         </div>
       </header>
     );
