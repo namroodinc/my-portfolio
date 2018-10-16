@@ -5,7 +5,7 @@
 
   &__list-item {
     display: flex;
-    height: 400px; /* */
+    height: auto; /* */
     margin-bottom: 40px;
     position: relative;
     width: 48%;
@@ -25,8 +25,15 @@
 
     &__content {
       display: block;
+      width: 100%;
 
       img {
+        width: 100%;
+      }
+
+      &__media {
+        height: 400px;
+        position: relative;
         width: 100%;
       }
     }

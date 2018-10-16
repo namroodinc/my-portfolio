@@ -6,7 +6,7 @@ import Glitch from "./Glitch";
 
 class PortfolioListItem extends React.Component {
   render() {
-    const { assetUrl, id, title } = this.props;
+    const { assetUrl, id } = this.props;
 
     return (
       <div
@@ -15,18 +15,17 @@ class PortfolioListItem extends React.Component {
         <div
           className="portfolio__list-item__content"
         >
-          <Link
-            to={`/work/${id}`}
+          <div
+            className="portfolio__list-item__content__media"
           >
-            <Glitch
-              src={`https:${assetUrl}`}
-            />
-          </Link>
-          <Link
-            to={`/work/${id}`}
-          >
-            {title}
-          </Link>
+            <Link
+              to={`/work/${id}`}
+            >
+              <Glitch
+                src={`https:${assetUrl}`}
+              />
+            </Link>
+          </div>
         </div>
       </div>
     );

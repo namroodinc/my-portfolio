@@ -36,9 +36,7 @@ export default class AppController extends React.Component {
 
         </div>
 
-        <footer>
-          .
-        </footer>
+        <footer />
 
       </div>
     )

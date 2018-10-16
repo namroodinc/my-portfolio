@@ -6,37 +6,35 @@ h1, h2, h3, h4, h5 {
   display: block;
   margin-top: 0;
   & > a {
-    color: inherit;
+    color: $bg;
   }
 }
 
 h1 {
-  color: inherit;
-  font-size: 2em;
+  color: $bg;
+  font-size: 3em;
   font-weight: 700;
   margin-bottom: 20px;
-  text-transform: capitalize;
 }
 
 h2 {
-  color: inherit;
+  color: $bg;
   font-size: 1.8em;
   font-weight: 700;
   line-height: 1.3em;
   margin-bottom: 20px;
-  text-transform: capitalize;
 }
 
 h3 {
-  color: inherit;
+  color: $black;
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 40px;
   margin-bottom: 10px;
 }
 
 h4 {
-  color: inherit;
+  color: $bg;
   font-size: 1em;
   font-weight: 700;
   line-height: normal;
@@ -44,7 +42,7 @@ h4 {
 }
 
 h5 {
-  color: inherit;
+  color: $bg;
   font-size: 0.8em;
   font-weight: 400;
   margin-bottom: 0;

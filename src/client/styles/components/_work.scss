@@ -1,0 +1,22 @@
+.work {
+
+  &__text {
+    padding-left: 40px;
+
+    @media only screen and (max-width: $fullContainerWidth) {
+      padding-left: 0;
+    }
+
+    p,
+    li {
+      color: $black;
+      font-size: 1.5em;
+      font-weight: 600;
+      line-height: 40px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}

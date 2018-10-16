@@ -421,7 +421,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 400px;
+    height: auto;
     /* */
     margin-bottom: 40px;
     position: relative;
@@ -437,9 +437,28 @@
         margin-bottom: 20px;
         width: 100%; } }
     .portfolio__list-item__content {
-      display: block; }
+      display: block;
+      width: 100%; }
       .portfolio__list-item__content img {
         width: 100%; }
+      .portfolio__list-item__content__media {
+        height: 400px;
+        position: relative;
+        width: 100%; }
+
+.work__text {
+  padding-left: 40px; }
+  @media only screen and (max-width: 1200px) {
+    .work__text {
+      padding-left: 0; } }
+  .work__text p,
+  .work__text li {
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 40px; }
+  .work__text p {
+    margin-bottom: 10px; }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Roboto, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Open Sans", sans-serif;
@@ -448,7 +467,24 @@ body {
 
 .container {
   margin: auto;
-  max-width: 1200px; }
+  max-width: 1200px;
+  padding: 20px; }
+
+a {
+  color: #880E4F;
+  font-weight: 700;
+  text-decoration: none; }
+  a[href*='linkedin'] {
+    color: #007BB5; }
+  a[href*='twitter'] {
+    color: #1DA1F2; }
+  a[href*='github'] {
+    color: #24292e; }
+
+hr {
+  border-color: #FAFAFA;
+  border-style: solid;
+  margin: 40px 0; }
 
 h1, h2, h3, h4, h5 {
   font-family: -apple-system, BlinkMacSystemFont, Helvetica, Roboto, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Open Sans", sans-serif; }
@@ -457,39 +493,37 @@ h1, h2, h3, h4, h5 {
   display: block;
   margin-top: 0; }
   h1 > a, h2 > a, h3 > a, h4 > a, h5 > a {
-    color: inherit; }
+    color: #880E4F; }
 
 h1 {
-  color: inherit;
-  font-size: 2em;
+  color: #880E4F;
+  font-size: 3em;
   font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: capitalize; }
+  margin-bottom: 20px; }
 
 h2 {
-  color: inherit;
+  color: #880E4F;
   font-size: 1.8em;
   font-weight: 700;
   line-height: 1.3em;
-  margin-bottom: 20px;
-  text-transform: capitalize; }
+  margin-bottom: 20px; }
 
 h3 {
-  color: inherit;
+  color: #000000;
   font-size: 1.5em;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 40px;
   margin-bottom: 10px; }
 
 h4 {
-  color: inherit;
+  color: #880E4F;
   font-size: 1em;
   font-weight: 700;
   line-height: normal;
   margin-bottom: 0; }
 
 h5 {
-  color: inherit;
+  color: #880E4F;
   font-size: 0.8em;
   font-weight: 400;
   margin-bottom: 0;

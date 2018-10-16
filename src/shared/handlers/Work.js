@@ -42,23 +42,31 @@ class Work extends React.Component {
       <div
         className="container"
       >
-        <h1>
-          {title}
-        </h1>
+        <div
+          className="work"
+        >
+          <h1>
+            {title}
+          </h1>
 
-        {text !== undefined &&
+          {text !== undefined &&
+            <div
+              className="work__text"
+            >
+              {ReactHtmlParser(marked(text))}
+            </div>
+          }
+
+          <hr />
+
           <div>
-            {ReactHtmlParser(marked(text))}
+            {assets.map((asset, i) =>
+              <img
+                key={i}
+                src={asset.url}
+              />
+            )}
           </div>
-        }
-
-        <div>
-          {assets.map((asset, i) =>
-            <img
-              key={i}
-              src={asset.url}
-            />
-          )}
         </div>
       </div>
     )

@@ -9,4 +9,29 @@ body {
 .container {
   margin: auto;
   max-width: $fullContainerWidth;
+  padding: 20px;
+}
+
+a {
+  color: $bg;
+  font-weight: 700;
+  text-decoration: none;
+
+  &[href*='linkedin'] {
+    color: $linkedin;
+  }
+
+  &[href*='twitter'] {
+    color: $twitter;
+  }
+
+  &[href*='github'] {
+    color: $github;
+  }
+}
+
+hr {
+  border-color: #FAFAFA;
+  border-style: solid;
+  margin: 40px 0;
 }
