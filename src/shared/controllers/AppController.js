@@ -24,12 +24,12 @@ export default class AppController extends React.Component {
           <Switch>
             <Route
               exact
-              path={`${process.env.PUBLIC_URL}/`}
+              path="/"
               component={Home}
             />
             <Route
               exact
-              path={`${process.env.PUBLIC_URL}/work/:portfolioId`}
+              path="/work/:portfolioId"
               component={Work}
             />
           </Switch>

@@ -46,9 +46,11 @@ class Work extends React.Component {
           {title}
         </h1>
 
-        <div>
-          {ReactHtmlParser(marked(text))}
-        </div>
+        {text !== undefined &&
+          <div>
+            {ReactHtmlParser(marked(text))}
+          </div>
+        }
 
         <div>
           {assets.map((asset, i) =>

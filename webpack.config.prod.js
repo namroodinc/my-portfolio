@@ -62,8 +62,7 @@ module.exports = {
       "SPACE_ID",
       "CONTENT_DELIVERY_API",
       "API_BASE_URL",
-      "BASE",
-      "PUBLIC_URL"
+      "BASE"
     ])
   ]
 };

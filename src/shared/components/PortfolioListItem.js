@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import Glitch from "./Glitch";
 
@@ -14,18 +15,18 @@ class PortfolioListItem extends React.Component {
         <div
           className="portfolio__list-item__content"
         >
-          <a
-            href={`/work/${id}`}
+          <Link
+            to={`/work/${id}`}
           >
             <Glitch
               src={`https:${assetUrl}`}
             />
-          </a>
-          <a
-            href={`/work/${id}`}
+          </Link>
+          <Link
+            to={`/work/${id}`}
           >
             {title}
-          </a>
+          </Link>
         </div>
       </div>
     );
