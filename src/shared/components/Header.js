@@ -24,6 +24,11 @@ export default class Header extends React.Component {
           >
             Home
           </a>
+          <a
+            href="/page"
+          >
+            Page
+          </a>
         </div>
       </header>
     );
